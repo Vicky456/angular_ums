@@ -1,0 +1,37 @@
+<div class="padding">
+
+  <dash-1></dash-1>
+
+
+
+
+  <div class="box">
+    <div class="box-header">
+      <h2>Departments View</h2>
+
+    </div>
+
+    <div>
+      <table class="table " ui-jp="footable" data-filter="#filter" data-page-size="5">
+
+        <thead>
+        <th *ngFor="let nam of title">{{nam}}</th>
+
+        </thead>
+        <tbody>
+
+        <tr *ngFor="let tmp of datas">
+          <td *ngFor="let tp of tmp">
+            {{tp}}
+          </td>
+        </tr>
+
+
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+
+</div>
+

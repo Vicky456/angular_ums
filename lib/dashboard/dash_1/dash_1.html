@@ -1,0 +1,75 @@
+<div class="row">
+  <div class="col-md-4">
+    <div class="center-block" style="text-align:  center;padding-top: 15px;">
+      <div class="box" style="padding-top: 10px;">
+
+
+        <h5>Student's in school</h5>
+
+
+        <h1 style="margin-top: 5px;padding-bottom: 5px;">{{sut}}</h1>
+      </div><div class="box" style="padding-top: 10px;">
+      <h5>Staff's in school</h5>
+
+
+      <h1 style="margin-top: 5px;padding-bottom: 5px;">{{stf}}</h1>
+    </div><div class="box" style="padding-top: 10px;">
+      <h5>Department's in school</h5>
+
+
+      <h1 style="margin-top: 5px;padding-bottom: 5px;">{{dep}}</h1>
+    </div>
+    </div>
+  </div>
+
+  <div class="col-md-8 box">
+    <div class="box-header">
+      <h5>Departments</h5>
+
+    </div>
+    <div class="box-body">
+      <table class="table table-responsive  m-b-none default ">
+        <thead>
+        <tr>
+          <th>
+            Departments Name
+          </th>
+          <th>
+            Students count(male)
+          </th>
+          <th>
+            Students count(female)
+          </th>
+          <th>
+            Total
+          </th>
+
+        </tr>
+        </thead>
+
+        <tbody>
+
+
+        <tr *ngFor="let tmp of datas">
+          <td *ngFor="let tp of tmp">
+            {{tp}}
+          </td>
+        </tr>
+
+
+        </tbody>
+        <tfoot>
+        <tr>
+          <th colspan="2">
+            Students is {{sut}}
+          </th>
+          <th colspan="2">
+            Departments is {{dep}}
+          </th>
+        </tr>
+        </tfoot>
+      </table>
+    </div>
+
+  </div>
+</div>
