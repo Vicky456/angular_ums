@@ -4,12 +4,18 @@ import 'package:http/browser_client.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'package:sms/dashboard/dash_1/dash_1.dart';
+import 'package:sms/dashboard/dash_2/dash_2.dart';
+import 'package:sms/dashboard/dash_3/dash_3.dart';
+import 'package:sms/dashboard/dash_4/dash_4.dart';
+import 'package:sms/dashboard/dash_5/dash_5.dart';
+import 'package:sms/dashboard/dash_6/dash_6.dart';
+import 'package:sms/dashboard/dash_7/dash_7.dart';
 
 @Component(
   selector: 'dashboard',
   templateUrl: 'dashboard.html',
   styleUrls: const ['dashboard.css'],
-  directives: const[CORE_DIRECTIVES,Dash1]
+  directives: const[CORE_DIRECTIVES,Dash1,Dash2,Dash3,Dash4,Dash5,Dash6,Dash7]
 )
 class Dashboard implements OnInit {
 
@@ -20,11 +26,11 @@ class Dashboard implements OnInit {
   var url='http://localhost:8086/projectums/dashboard_api';
 
 
-  var datas=new List();
+  var datas='';
 
   @override
   void ngOnInit() {
-    //getDate();
+    getDate();
   }
 
 
@@ -40,26 +46,11 @@ class Dashboard implements OnInit {
 
 
 
-      this.title=data["title"].toString().replaceAll("[", "").replaceAll("]", "").split(",");
-      int n=data["title"].toString().replaceAll("[", "").replaceAll("]", "").split(",").length;
 
 
+    print(data['data'][0]['1']);
 
-
-    for (Map word in data['data']) {
-
-      List t=new List();
-
-      word.forEach((k,v) => t.add(v));
-
-      this.datas.add(t);
-
-    }
-
-
-    //print(this.datas);
-
-
+    
 
 
 
